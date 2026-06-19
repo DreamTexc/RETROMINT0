@@ -14,21 +14,25 @@
             padding: 15px;
             border: 1px solid #0f0;
             width: fit-content;
+            white-space: pre-wrap;
         }
     </style>
 </head>
 <body>
 
-    <h1>Python Special Characters (JavaScript Version)</h1>
+<h1>RETROMINT0 – Enhancement Globe</h1>
 
 <div class="box" id="output"></div>
-# ================================
+
+<!-- ============================================
+     RETROMINT0 :: Discipline Module (PYTHON TEXT)
+     ============================================ -->
+<pre style="color:#0f0;">
 # RETROMINT0 :: Discipline Module
 # Subsystem: OptiScaler Engine
 # Purpose: AI-driven image/video enhancement
 # Context-Aware: Integrates with active browser session metadata
-# ================================
-    <script>
+
 class OptiScalerDiscipline:
     """
     RETROMINT0 Enhancement Discipline
@@ -38,55 +42,97 @@ class OptiScalerDiscipline:
     RETROMINT0 front-end (COFFEE.html) provides UI interaction.
     """
 
-    def __init__(self, model='esrgan', scale_factor=2, device='cuda', session_context=None):
-        # Core AI model configuration
+    def __init__(self, model='esrgan', scale_factor=2, session_context=None):
         self.model = model
         self.scale_factor = scale_factor
         self.device = device
-
-        # Browser session context (edge_all_open_tabs)
         self.session_context = session_context
-
-        # Initialize the underlying AI engine
+<script>
         self.scaler = OptiScaler(
             model=self.model,
             scale_factor=self.scale_factor,
             device=self.device
         )
-
+</script>            
+<a></a>
+    <script>
     def enhance_image(self, input_path, output_path):
-        """
-        Enhance a single image using the configured AI model.
-        """
-        img = load_image(input_path)
+        <src>img = load_image(input_path)
         result = self.scaler.upscale(img)
         save_image(result, output_path)
         return output_path
 
     def active_tab_info(self):
-        """
-        Returns the currently active tab from the session context.
-        Useful for linking enhancement tasks to the user's live UI.
-        """
         if not self.session_context:
             return None
-
         for tab in self.session_context:
             if tab.get("isCurrent"):
                 return tab
+        return None</src>
+      <script>        
+    <a></a>
+</pre>
 
-        return None
-    </script>
+<!-- ============================================
+     RETROMINT0 :: AutoEnhanceGlobe (Java Reflection Simulator)
+     ============================================ -->
+<script>
+// Java Reflection Simulator for getGenericParameterTypes()
+class AutoEnhanceGlobe {
 
-    <script>
-        // Composite function: returns the same characters as Python's string.punctuation
-        function getPythonPunctuation() {
-            return `!"#$%&'()*+,-./:;<=>?@[\\]^_\`{|}~`;
-        }
+    static buildGlobe(methodDescriptor) {
+        const globe = {
+            name: methodDescriptor.name || "unknown",
+            declaringClass: methodDescriptor.declaringClass || "unknown",
+            modifiers: methodDescriptor.modifiers || [],
+            parameterCount: methodDescriptor.parameters?.length || 0,
+            rawParameterTypes: [],
+            genericParameterTypes: [],
+            parameterObjects: [],
+            enhanced: true,
+            engine: "RETROMINT0 :: AutoEnhanceGlobe v1.0"
+        };
 
-        // Display them on the page
-        document.getElementById("output").textContent = getPythonPunctuation();
-    </script>
+        // Raw parameter types
+        globe.rawParameterTypes = methodDescriptor.parameters.map(p => p.type);
+
+        // Generic parameter types (core focus)
+        globe.genericParameterTypes = methodDescriptor.parameters.map(p => {
+            return p.genericType || p.type;
+        });
+
+        // Parameter objects
+        globe.parameterObjects = methodDescriptor.parameters.map(p => ({
+            name: p.name,
+            type: p.type,
+            genericType: p.genericType || p.type,
+            annotations: p.annotations || []
+        }));
+
+        return globe;
+    }
+}
+
+// Demo: Build a globe and display it
+function demoGlobe() {
+    const sampleMethod = {
+        name: "processData",
+        declaringClass: "com.retromint0.engine.DataCore",
+        modifiers: ["public"],
+        parameters: [
+            { name: "input", type: "List", genericType: "List<String>" },
+            { name: "flag", type: "boolean" }
+        ]
+    };
+
+    const globe = AutoEnhanceGlobe.buildGlobe(sampleMethod);
+
+    document.getElementById("output").textContent =
+        JSON.stringify(globe, null, 4);
+}
+
+demoGlobe();
+</script>
 
 </body>
 </html>
