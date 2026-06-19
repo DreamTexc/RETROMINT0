@@ -22,6 +22,60 @@
     <h1>Python Special Characters (JavaScript Version)</h1>
 
     <div class="box" id="output"></div>
+# ================================
+# RETROMINT0 :: Discipline Module
+# Subsystem: OptiScaler Engine
+# Purpose: AI-driven image/video enhancement
+# Context-Aware: Integrates with active browser session metadata
+# ================================
+<script>
+class OptiScalerDiscipline:
+    """
+    RETROMINT0 Enhancement Discipline
+    --------------------------------
+    Provides AI-based super-resolution using ESRGAN or compatible models.
+    Designed to operate as a backend enhancement engine while the
+    RETROMINT0 front-end (COFFEE.html) provides UI interaction.
+    """
+
+    def __init__(self, model='esrgan', scale_factor=2, device='cuda', session_context=None):
+        # Core AI model configuration
+        self.model = model
+        self.scale_factor = scale_factor
+        self.device = device
+
+        # Browser session context (edge_all_open_tabs)
+        self.session_context = session_context
+
+        # Initialize the underlying AI engine
+        self.scaler = OptiScaler(
+            model=self.model,
+            scale_factor=self.scale_factor,
+            device=self.device
+        )
+
+    def enhance_image(self, input_path, output_path):
+        """
+        Enhance a single image using the configured AI model.
+        """
+        img = load_image(input_path)
+        result = self.scaler.upscale(img)
+        save_image(result, output_path)
+        return output_path
+
+    def active_tab_info(self):
+        """
+        Returns the currently active tab from the session context.
+        Useful for linking enhancement tasks to the user's live UI.
+        """
+        if not self.session_context:
+            return None
+
+        for tab in self.session_context:
+            if tab.get("isCurrent"):
+                return tab
+
+        return None
 
     <script>
         // Composite function: returns the same characters as Python's string.punctuation
